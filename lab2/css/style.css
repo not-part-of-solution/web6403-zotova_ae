@@ -35,6 +35,15 @@ body {
     text-decoration: none;
 }
 
+#page-heading {
+    font-family: "Press Start 2P", monospace;
+    font-size: 36px;
+    color: #faf7f2;
+    text-align: center;
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+}
+
 .intro{
     position: relative;
     width: 100%;
@@ -55,7 +64,7 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
+.intro::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -68,7 +77,7 @@ body {
     z-index: 0;
 }
 
-.hero-content {
+.intro-content {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -78,7 +87,7 @@ body {
 }
 
 
-.hero-title {
+.intro-title {
     font-size: 72px;
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
@@ -88,7 +97,7 @@ body {
     color: #f4f1ec;
 }
 
-.hero-subtitle {
+.intro-subtitle {
     font-family: "Press Start 2P", system-ui;
     font-size: 32px;
     font-weight: bold;
@@ -96,11 +105,12 @@ body {
     color: #f4f1ec;
 }
 
-.hero-stats {
+.intro-stats {
     display: flex;
     justify-content: center;
     gap: 80px;
     flex-wrap: wrap;
+    color: #f4f1ec;
 }
 
 .stat {
@@ -199,9 +209,7 @@ body {
     text-align: center;
     overflow-x: auto;                  
     scroll-behavior: smooth;           
-    scroll-snap-type: x mandatory;    
-
-    padding: 20px 0;                 
+    scroll-snap-type: x mandatory;                  
 
     scrollbar-width: none;           
 }
@@ -217,8 +225,6 @@ body {
     height: 200px;
     background-color: #faf7f2;
     border: 5px solid transparent;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -585,4 +591,89 @@ body {
         grid-template-columns: 1fr;
         gap: 18px;
     }
+}
+
+.thanks-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+    box-sizing: border-box;
+    min-height: 60vh;                     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thanks-hero {
+    position: relative;
+    width: 100%;
+    min-height: 320px;                    
+    margin: 60px 0 40px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    background-color: #3a2f25;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.thanks-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 0;
+}
+
+.thanks-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px 30px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.thanks-title {
+    font-family: "Press Start 2P", monospace;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 12px rgba(0, 0, 0, 0.9),
+        3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.thanks-subtitle {
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    color: #e8dcc8;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.thanks-link {
+    color: #e69d59;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.thanks-link:hover {
+    color: #f1c40f;
+    text-decoration: none;
 }
