@@ -57,15 +57,27 @@ body {
     height: 55px;
     width: auto;
 }
-.menu{
+.menu {
     display: flex;
-    justify-content: space-between;  
-    align-items: center;
-
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center;
+    gap: 8px;         
+    
     width: 100%;                     
     box-sizing: border-box;           
-    background-color: var(--orange-bg-color);
-    padding: 14px 20px;
+    background-color: var(--orange-bg-color); 
+    padding: 12px 40px;     
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.menu__links {
+    display: flex;          /* Делает ссылки в ряд */
+    justify-content: space-between; /* Центрирует их */
+    gap: 90px;              /* Отступ между ссылками */
+    flex-wrap: wrap;       
+    width: 100%;
+    margin-bottom: 15px;    /* Отступ от ссылок до манула */
 }
 .menu a{
     color: var(--brown-link-color);
@@ -80,14 +92,6 @@ body {
     text-decoration: none;
 }
 
-#page-heading {
-    font-family: "Press Start 2P", monospace;
-    font-size: 36px;
-    color: var(--white-text-color);
-    text-align: center;
-    margin: 0 0 15px;
-    letter-spacing: 1px;
-}
 
 .intro{
     position: relative;
@@ -122,7 +126,7 @@ body {
     z-index: 0;
 }
 
-.intro-content {
+.intro__content {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -132,7 +136,7 @@ body {
 }
 
 
-.intro-title {
+.intro__title {
     font-size: 72px;
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
@@ -142,7 +146,7 @@ body {
     color: var(--white-catalog-color);
 }
 
-.intro-subtitle {
+.intro__subtitle {
     font-family: "Press Start 2P", system-ui;
     font-size: 32px;
     font-weight: bold;
@@ -150,7 +154,7 @@ body {
     color: var(--white-catalog-color);
 }
 
-.intro-stats {
+.intro__stats {
     display: flex;
     justify-content: center;
     gap: 80px;
@@ -164,13 +168,13 @@ body {
     align-items: center;
 }
 
-.stat-label {
+.stat__label {
     font-size: 16px;
     margin-bottom: 5px;
     opacity: 0.9;
 }
 
-.stat-value {
+.stat__value {
     font-size: 44px;
     font-weight: bold;
     line-height: 1;
@@ -184,21 +188,20 @@ body {
     padding: 40px; 
 }
 
-.image-text{
+.gallery__title{
     font-family: "Press Start 2P", system-ui;
     font-size: 20px;
     font-weight: bold;
     margin: 0 0 40px;
     color: var(--white-catalog-color);
 }
-.gallery-grid {
+.gallery__grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Карточка */
-.gallery-item {
+.gallery__item {
     background-color: var(--white-text-color);
     border: 1px solid var(--white-border-color);
     border-radius: 8px;
@@ -209,14 +212,14 @@ body {
     cursor: zoom-in;
 }
 
-.gallery-item:hover {
+.gallery__item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
     cursor: url("../images/cursor_image2.png") 4 4, auto;
 }
 
 
-.gallery-item img {
+.gallery__item img {
     width: 100%;
     height: 220px;            
     object-fit: cover;         
@@ -225,7 +228,7 @@ body {
 
 }
 
-.gallery-caption {
+.gallery__caption {
     padding: 10px 12px;
     font-size: 14px;
     font-family: "Fira Code";
@@ -234,18 +237,18 @@ body {
     background-color: var(--white-text-color);
 }
 
-.popular-section {
+.popular {
     background-color: var( --brown-bg-color);
     padding: 20px;
 }
-.image-text {
+.gallery__title {
     font-family: "Press Start 2P", system-ui;
     font-size: 32px;
     font-weight: bold;
     margin: 0 0 40px;
     color: var(--white-catalog-color);
 }
-.popular-grid {
+.popular__grid {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -260,12 +263,12 @@ body {
     scrollbar-width: none;           
 }
 
-.popular-card {
+.popular__card {
     flex: 0 0 200px;            
     scroll-snap-align: start;   
     text-align: center;         
 }
-.popular-item {
+.popular__item {
     flex: 0 0 200px;       
     width: 200px;
     height: 200px;
@@ -277,35 +280,35 @@ body {
     cursor: zoom-in;
 }
 
-.popular-item--m {
+.popular__item--male {
     background-color: var(--blue-male-color);   
 }
 
-.popular-item--w {
+.popular__item--woman {
     background-color: var(--pink-woman-color);   
 }
 
-.popular-item--d {
+.popular__item--death {
     background:
         var(--death-gradient) border-box,
         var(--white-text-color) padding-box;
 }
 
 
-.popular-item img {
+.popular__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;  
 }
 
-.popular-item:hover {
+.popular__item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
     cursor: url("../images/cursor_image2.png") 4 4, auto;
 }
 
-.popular-caption{
+.popular__caption{
     padding: 10px 12px;
     font-size: 18px;
     font-weight: bold;
@@ -314,7 +317,7 @@ body {
     color: var(--white-text-color);
 }
 
-.popular-heart {
+.popular__heart {
     display: inline-flex;         
     align-items: center;              
     gap: 6px;                          
@@ -326,7 +329,7 @@ body {
     margin-top: 6px;
 }
 
-.heart-icon {
+.popular__heart-icon {
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -336,7 +339,7 @@ body {
     background-position: center;
 }
 
-.info-block{
+.info{
     position: relative;
     width: 100%;
     height: 500px; 
@@ -357,7 +360,7 @@ body {
     padding: 60px 40px; 
 }
 
-.info-title {
+.info__title {
     font-size: 32px;
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
@@ -367,7 +370,7 @@ body {
     color: var(--white-catalog-color);
 }
 
-.info-block::before {
+.info::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -380,7 +383,7 @@ body {
     z-index: 0;
 }
 
-.info-text{
+.info__text{
     font-family: "Press Start 2P", system-ui;
     font-size: 12px;
     line-height: 1.5;
@@ -388,7 +391,7 @@ body {
     color: var(--white-catalog-color);
 }
 
-.about-content {
+.info__content {
     position: relative;
     z-index: 1;
     max-width: 700px; 
@@ -406,7 +409,7 @@ body {
 }
 
 
-.zoo-hero {
+.zoo__hero {
     position: relative;
     width: 100%;
     min-height: 220px;          
@@ -428,7 +431,7 @@ body {
 }
 
 
-.zoo-hero::before {
+.zoo__hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -436,7 +439,7 @@ body {
     z-index: 0;
 }
 
-.zoo-content {
+.zoo__hero-content {
     position: relative;
     z-index: 1;
     max-width: 800px;
@@ -449,7 +452,7 @@ body {
 }
 
 
-.zoo-title {
+.zoo__title {
     position: relative;
     z-index: 1;                      
 
@@ -463,7 +466,7 @@ body {
     text-shadow: var( --shadow-txt-2); 
 }
 
-.zoo-subtitle {
+.zoo__subtitle {
     text-align: center;
     color: var(--white-bg-color);
     font-size: 16px;
@@ -472,7 +475,7 @@ body {
 }
 
 
-.catalog-table {
+.zoo__table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--white-bg-color);
@@ -483,7 +486,7 @@ body {
     font-size: 15px;
 }
 
-.catalog-table caption {
+.zoo__table caption {
     caption-side: top;
     font-size: 18px;
     font-weight: bold;
@@ -492,7 +495,7 @@ body {
     text-align: left;
 }
 
-.catalog-table th {
+.zoo__table th {
     background-color: var( --brown-bg-color);
     color: var(--white-text-color);
     padding: 14px 16px;
@@ -500,47 +503,47 @@ body {
     border-bottom: 3px solid var(--orange-bg-color);
 }
 
-.catalog-table td {
+.zoo__table td {
     padding: 12px 16px;
     border-bottom: 1px solid var(--white-border-color);
     color: var(--white-catalog-color-d);
 }
 
-.catalog-table tbody tr:nth-child(even) {
+.zoo__table tbody tr:nth-child(even) {
     background-color: var(--white-catalog-color);
 }
 
 
-.catalog-table tbody tr:hover {
+.zoo__table tbody tr:hover {
     background-color: var(--white-catalog-color-h);
     transition: background-color 0.2s ease;
 }
 
 
-.left   { text-align: left; }
-.center { text-align: center; }
-.right  { text-align: right; }
+.zoo__cell--left   { text-align: left; }
+.zoo__cell--center { text-align: center; }
+.zoo__cell--right { text-align: right; }
 
 @media (max-width: 700px) {
-    .zoo-section {
+    .zoo {
         padding: 0 15px;
     }
 
-    .zoo-title {
+    .zoo__title {
         font-size: 24px;
     }
 
-    .catalog-table {
+    .zoo__table {
         font-size: 12px;
     }
 
-    .catalog-table th,
-    .catalog-table td {
+    .zoo__table th,
+    .zoo__table td {
         padding: 8px 6px;
     }
 }
 
-.video-header {
+.video__intro {
     max-width: 1280px;
     margin: 0 auto;                     
     padding: 60px 40px 30px;            
@@ -548,7 +551,7 @@ body {
     box-sizing: border-box;
 }
 
-.video-heading {
+.video__heading {
     font-family: "Press Start 2P", monospace;
     font-size: 36px;
     font-weight: bold;
@@ -557,7 +560,7 @@ body {
     letter-spacing: 1px;
 }
 
-.video-subtitle {
+.video-intro__subtitle {
     font-family: "Fira Code", monospace;
     font-size: 16px;
     color: var(--white-bg-color);
@@ -568,39 +571,39 @@ body {
     margin-right: auto;
 }
 
-.video-section {
+.video {
     max-width: 1280px;
     margin: 0 auto 40px;
     padding: 0 40px;
     box-sizing: border-box;
 }
 
-.video-section {
+.video {
     max-width: 1280px;
     margin: 0 auto 40px;
     padding: 0 40px;
     box-sizing: border-box;
 }
 
-.video-grid {
+.video__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 24px;
 }
 
-.video-card {
+.video__card {
     background-color: var(--white-catalog-color-d);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.video-card:hover {
+.video__card:hover {
     transform: translateY(-4px);
     box-shadow:var(--shadow-lg);
 }
 
-.video-item {
+.video__iframe-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -608,7 +611,7 @@ body {
     background-color: var(--black-bg-color);
 }
 
-.video-item iframe {
+.video__iframe-wrapper iframe {
     cursor: url("../images/cursor_image2.png") 4 4, auto;
     position: absolute;
     inset: 0;
@@ -617,7 +620,7 @@ body {
     border: none;
 }
 
-.video-title {
+.video__title {
     font-family: "Press Start 2P", monospace;
     font-size: 10px;
     color: var(--white-text-color);
@@ -628,14 +631,14 @@ body {
 
 
 @media (max-width: 700px) {
-    .video-section { padding: 0 15px; }
-    .video-grid {
+    .video { padding: 0 15px; }
+    .video__grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 }
 
-.thanks-section {
+.thanks {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 40px 60px;
@@ -646,7 +649,7 @@ body {
     justify-content: center;
 }
 
-.thanks-hero {
+.thanks__hero {
     position: relative;
     width: 100%;
     min-height: 320px;                    
@@ -664,7 +667,7 @@ body {
     box-shadow: var(--shadow-box);
 }
 
-.thanks-hero::before {
+.thanks__hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -676,7 +679,7 @@ body {
     z-index: 0;
 }
 
-.thanks-content {
+.thanks__content {
     position: relative;
     z-index: 1;
     text-align: center;
@@ -687,7 +690,7 @@ body {
     gap: 20px;
 }
 
-.thanks-title {
+.thanks__title {
     font-family: "Press Start 2P", monospace;
     font-size: 32px;
     font-weight: bold;
@@ -700,7 +703,7 @@ body {
         var(--shadow-txt-1);
 }
 
-.thanks-subtitle {
+.thanks__subtitle {
     font-family: "Fira Code", monospace;
     font-size: 16px;
     color: var(--white-bg-color);
@@ -708,19 +711,19 @@ body {
     line-height: 1.7;
 }
 
-.thanks-link {
+.thanks__link {
     color: var(--orange-bg-color);
     font-weight: bold;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
-.thanks-link:hover {
+.thanks__link:hover {
     color: var(--orange-link-color);
     text-decoration: none;
 }
 
-.login_intro {
+.login {
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -734,7 +737,7 @@ body {
     background-position: top left; 
 }
 
-.auth-form {
+.auth {
     width: 100%;
     max-width: 460px;
     display: flex;
@@ -753,20 +756,20 @@ body {
     box-sizing: border-box;
     box-shadow: var(--shadow-xl);
 }
-.auth-field {
+.auth__field {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.auth-label {
+.auth__label {
     font-family: "Fira Code", monospace;
     font-size: 14px;
     font-weight: bold;
     color: var( --brown-bg-color);
 }
 
-.auth-input {
+.auth__input {
     font-family: "Fira Code", monospace;
     font-size: 15px;
     padding: 10px 12px;
@@ -779,18 +782,18 @@ body {
     box-sizing: border-box;
 }
 
-.auth-input:focus {
+.auth__input:focus {
     border-color: var(--orange-bg-color);
     box-shadow: var(--orange-focus-shadow);
 }
 
-.auth-field--checkbox {
+.auth__field--checkbox {
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-.auth-checkbox {
+.auth__checkbox {
     width: 18px;
     height: 18px;
     accent-color: var(--orange-bg-color);
@@ -798,7 +801,7 @@ body {
     flex-shrink: 0;
 }
 
-.auth-checkbox-label {
+.auth__checkbox-label {
     cursor: url("../images/cursor_image2.png") 4 4, auto;
     font-family: "Fira Code", monospace;
     font-size: 13px;
@@ -806,10 +809,10 @@ body {
     cursor: pointer;
     line-height: 1.4;
 }
-.auth-checkbox-label:hover {
+.auth__checkbox-label:hover {
     cursor: url("../images/cursor_image2.png") 4 4, auto;
 }
-.auth-submit {
+.auth__submit {
     font-family: "Press Start 2P", monospace;
     font-size: 12px;
     padding: 14px 18px;
@@ -822,17 +825,17 @@ body {
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-.auth-submit:hover {
+.auth__submit:hover {
     cursor: url("../images/cursor_image2.png") 4 4, auto;
     background-color: var(--orange-submit-color-h);
     transform: translateY(-2px);
 }
 
-.auth-submit:active {
+.auth__submit:active {
     transform: translateY(0);
 }
 
-.auth-msg {
+.auth__msg {
     font-family: "Fira Code", monospace;
     font-size: 14px;
     padding: 12px;
@@ -842,13 +845,13 @@ body {
     animation: fadeIn 0.3s ease-in-out;
 }
 
-.auth-msg--success {
+.auth__msg--success {
     color: var(--green-agree-color); 
     background-color: var(--agree-bg-color); 
     border: var(--border-agree);
 }
 
-.auth-msg--error {
+.auth__msg--error {
     color: var(--red-fail-color); 
     background-color: var(--error-bg-color); 
     border: var(--border-error);
@@ -875,6 +878,6 @@ body {
     }
 }
 
-.heart-icon {
+.popular__heart-icon {
     animation: heartPulse 1.5s infinite ease-in-out;
 }

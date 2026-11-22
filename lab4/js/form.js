@@ -8,36 +8,32 @@ class UserData {
 
     print() {
         const maskedPassword = '*'.repeat(this.password.length);
-        console.log('=== Данные пользователя ===');
+        console.log('Данные пользователя');
         console.log('Логин:   ', this.login);
         console.log('Пароль:  ', maskedPassword);
         console.log('Email:   ', this.email);
         console.log('Согласие:', this.agreement ? 'да' : 'нет');
-        console.log('===========================');
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('auth-form');
+    const form = document.getElementById('auth');
     const msgElement = document.getElementById('form-msg'); // Наш блок для сообщений
 
-    // Вспомогательная функция для показа сообщений
     function showMessage(text, isError) {
         msgElement.textContent = text;
         msgElement.hidden = false;
         
-        // Меняем классы (цвет)
         if (isError) {
-            msgElement.className = 'auth-msg auth-msg--error';
+            msgElement.className = 'auth__msg auth__msg--error';
         } else {
-            msgElement.className = 'auth-msg auth-msg--success';
+            msgElement.className = 'auth__msg auth__msg--success';
         }
     }
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         
-        // Скрываем старое сообщение при новой попытке
         msgElement.hidden = true;
 
         const login = document.getElementById('login').value.trim();
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value.trim();
         const agreement = document.getElementById('agreement').checked;
 
-        // ПРОВЕРКИ (Валидация)
         if (!login || !password || !email) {
             console.warn("Заполните логин, пароль и email.");
             showMessage("Вы не можете стать манулом: Заполните логин, пароль и email!", true); // true = ошибка
@@ -58,17 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Если всё ок — создаем объект
         const user = new UserData(login, password, email, agreement);
         user.print();
 
-        // Показываем сообщение об успехе
-        showMessage("Успешно! Вы манул!", false); // false = успех
+        showMessage("Успешно! Вы манул!", false); 
 
-        // Очищаем форму
         form.reset();
         
-        // Прячем сообщение через 4 секунды (чтобы не мешало)
+    
         setTimeout(() => {
             msgElement.hidden = true;
         }, 4000);

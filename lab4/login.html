@@ -15,43 +15,45 @@
 <body>
     <header class="header">
         <nav class="menu">
-        <a href="index.html">ГЛАВНАЯ</a>
-        <a href="video_image.html">ВИДЕО С МАНУЛАМИ</a>
-         <img src="images/manul_icon.webp" alt="Пример изображения" class="menu-logo">
-        <a href="zoo.html">ЗООПАРКИ</a>
-        <a href="thanks.html">БЛАГОДАРНОСТИ</a>
-        <a href="login.html">АВТОРИЗАЦИЯ</a>
-    </nav>
+            <div class="menu__links">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="video_image.html">ВИДЕО С МАНУЛАМИ</a>
+                <a href="zoo.html">ЗООПАРКИ</a>
+                <a href="thanks.html">БЛАГОДАРНОСТИ</a>
+                <a href="login.html">АВТОРИЗАЦИЯ</a>
+            </div>
+            <img src="images/manul_icon.webp" alt="Манул" class="menu-logo">
+        </nav>
     </header>
     <main>
-        <section class = "login_intro">
-            <form class="auth-form" id="auth-form" novalidate>
-                <div class="auth-field">
-                    <label class="auth-label" for="login">Логин</label>
-                    <input class="auth-input" type="text" id="login" name="login"
+        <section class = "login">
+            <form class="auth" id="auth" novalidate>
+                <div class="auth__field">
+                    <label class="auth__label" for="login">Логин</label>
+                    <input class="auth__input" type="text" id="login" name="login"
                            placeholder="manul_lover" required>
                 </div>
-                <div class="auth-field">
-                    <label class="auth-label" for="password">Пароль</label>
-                    <input class="auth-input" type="password" id="password" name="password"
+                <div class="auth__field">
+                    <label class="auth__label" for="password">Пароль</label>
+                    <input class="auth__input" type="password" id="password" name="password"
                            placeholder="••••••••" required>
                 </div>
 
-                <div class="auth-field">
-                    <label class="auth-label" for="email">Email</label>
-                    <input class="auth-input" type="email" id="email" name="email"
+                <div class="auth__field">
+                    <label class="auth__label" for="email">Email</label>
+                    <input class="auth__input" type="email" id="email" name="email"
                            placeholder="manul@example.com" required>
                 </div>
 
-                <div class="auth-field auth-field--checkbox">
-                    <input class="auth-checkbox" type="checkbox" id="agreement" name="agreement" required>
-                    <label class="auth-checkbox-label" for="agreement">
+                <div class="auth__field auth__field--checkbox">
+                    <input class="auth__checkbox" type="checkbox" id="agreement" name="agreement" required>
+                    <label class="auth__checkbox-label" for="agreement">
                         Согласен на обработку персональных данных
                     </label>
                 </div>
 
-                <button class="auth-submit" type="submit">Стать манулом</button>
-                <p class="auth-msg" id="form-msg" hidden></p>
+                <button class="auth__submit" type="submit">Стать манулом</button>
+                <p class="auth__msg" id="form-msg" hidden></p>
             </form>
         </section>
     </main>

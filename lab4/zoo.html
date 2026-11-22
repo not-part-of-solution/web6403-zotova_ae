@@ -15,23 +15,24 @@
     <!-- ШАПКА -->
     <header class="header">
         <nav class="menu">
-            <a href="index.html">ГЛАВНАЯ</a>
-            <a href="video_image.html">ВИДЕО С МАНУЛАМИ</a>
+            <div class="menu__links">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="video_image.html">ВИДЕО С МАНУЛАМИ</a>
+                <a href="zoo.html">ЗООПАРКИ</a>
+                <a href="thanks.html">БЛАГОДАРНОСТИ</a>
+                <a href="login.html">АВТОРИЗАЦИЯ</a>
+            </div>
             <img src="images/manul_icon.webp" alt="Манул" class="menu-logo">
-            <a href="zoo.html">ЗООПАРКИ</a>
-            <a href="thanks.html">БЛАГОДАРНОСТИ</a>
-            <a href="login.html">АВТОРИЗАЦИЯ</a>
         </nav>
     </header>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
-    <main class="zoo-section">
+    <main class="zoo">
         
-        <div class="zoo-hero">
-            <div class="zoo-content">
-                    <h1 id="page-heading">Зоопарки, в которых есть манулы</h1>
+        <div class="zoo__hero">
+            <div class="zoo__hero-content">
+                    <h1 class="zoo__title">Зоопарки, в которых есть манулы</h1>
 
-                    <p class="zoo-subtitle">
+                    <p class="zoo__subtitle">
                         В мире около 140 зоопарков, где содержат манулов.
                         Общая численность в неволе — примерно 210 особей.
                         Список отсортирован по названию зоопарка.
@@ -39,301 +40,300 @@
             </div>
         </div>
 
-        <table class="catalog-table">
+        <table class="zoo__table">
             <caption>Зоопарки мира, где живут манулы (по алфавиту)</caption>
 
             <thead>
                 <tr>
-                    <th class="left">Зоопарк</th>
-                    <th class="left">Страна</th>
-                    <th class="center">Город</th>
-                    <th class="left">Статус</th>
-                    <th class="right">Год основания</th>
+                    <th class="zoo__cell--left">Зоопарк</th>
+                    <th class="zoo__cell--left">Страна</th>
+                    <th class="zoo__cell--center">Город</th>
+                    <th class="zoo__cell--left">Статус</th>
+                    <th class="zoo__cell--right">Год основания</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td class="left">Asahiyama Zoo</td>
-                    <td class="left">Япония</td>
-                    <td class="center">Асахикава</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1967</td>
+                    <td class="zoo__cell--left">Asahiyama Zoo</td>
+                    <td class="zoo__cell--left">Япония</td>
+                    <td class="zoo__cell--center">Асахикава</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1967</td>
                 </tr>
                 <tr>
-                    <td class="left">Banham Zoo</td>
-                    <td class="left">Великобритания</td>
-                    <td class="center">Банем</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1968</td>
+                    <td class="zoo__cell--left">Banham Zoo</td>
+                    <td class="zoo__cell--left">Великобритания</td>
+                    <td class="zoo__cell--center">Банем</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1968</td>
                 </tr>
                 <tr>
-                    <td class="left">Bio-Topia Dunkerque</td>
-                    <td class="left">Франция</td>
-                    <td class="center">Дюнкерк</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1957</td>
+                    <td class="zoo__cell--left">Bio-Topia Dunkerque</td>
+                    <td class="zoo__cell--left">Франция</td>
+                    <td class="zoo__cell--center">Дюнкерк</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1957</td>
                 </tr>
                 <tr>
-                    <td class="left">Bratislava Zoo</td>
-                    <td class="left">Словакия</td>
-                    <td class="center">Братислава</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1960</td>
+                    <td class="zoo__cell--left">Bratislava Zoo</td>
+                    <td class="zoo__cell--left">Словакия</td>
+                    <td class="zoo__cell--center">Братислава</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1960</td>
                 </tr>
                 <tr>
-                    <td class="left">Brookfield Zoo</td>
-                    <td class="left">США</td>
-                    <td class="center">Чикаго</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1934</td>
+                    <td class="zoo__cell--left">Brookfield Zoo</td>
+                    <td class="zoo__cell--left">США</td>
+                    <td class="zoo__cell--center">Чикаго</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1934</td>
                 </tr>
                 <tr>
-                    <td class="left">Budapest Zoo</td>
-                    <td class="left">Венгрия</td>
-                    <td class="center">Будапешт</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1866</td>
+                    <td class="zoo__cell--left">Budapest Zoo</td>
+                    <td class="zoo__cell--left">Венгрия</td>
+                    <td class="zoo__cell--center">Будапешт</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1866</td>
                 </tr>
                 <tr>
-                    <td class="left">Cotswold Wildlife Park</td>
-                    <td class="left">Великобритания</td>
-                    <td class="center">Берфорд</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1970</td>
+                    <td class="zoo__cell--left">Cotswold Wildlife Park</td>
+                    <td class="zoo__cell--left">Великобритания</td>
+                    <td class="zoo__cell--center">Берфорд</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1970</td>
                 </tr>
                 <tr>
-                    <td class="left">Diergaarde Blijdorp</td>
-                    <td class="left">Нидерланды</td>
-                    <td class="center">Роттердам</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1857</td>
+                    <td class="zoo__cell--left">Diergaarde Blijdorp</td>
+                    <td class="zoo__cell--left">Нидерланды</td>
+                    <td class="zoo__cell--center">Роттердам</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1857</td>
                 </tr>
                 <tr>
-                    <td class="left">Edinburgh Zoo</td>
-                    <td class="left">Великобритания</td>
-                    <td class="center">Эдинбург</td>
-                    <td class="left">Есть самка Duchess</td>
-                    <td class="right">1913</td>
+                    <td class="zoo__cell--left">Edinburgh Zoo</td>
+                    <td class="zoo__cell--left">Великобритания</td>
+                    <td class="zoo__cell--center">Эдинбург</td>
+                    <td class="zoo__cell--left">Есть самка Duchess</td>
+                    <td class="zoo__cell--right">1913</td>
                 </tr>
                 <tr>
-                    <td class="left">Gdańsk Zoo</td>
-                    <td class="left">Польша</td>
-                    <td class="center">Гданьск</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1954</td>
+                    <td class="zoo__cell--left">Gdańsk Zoo</td>
+                    <td class="zoo__cell--left">Польша</td>
+                    <td class="zoo__cell--center">Гданьск</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1954</td>
                 </tr>
                 <tr>
-                    <td class="left">Higashiyama Zoo</td>
-                    <td class="left">Япония</td>
-                    <td class="center">Нагоя</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1937</td>
+                    <td class="zoo__cell--left">Higashiyama Zoo</td>
+                    <td class="zoo__cell--left">Япония</td>
+                    <td class="zoo__cell--center">Нагоя</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1937</td>
                 </tr>
                 <tr>
-                    <td class="left">Kobe Animal Kingdom</td>
-                    <td class="left">Япония</td>
-                    <td class="center">Кобе</td>
-                    <td class="left">5 котят в мае 2026 г.</td>
-                    <td class="right">2006</td>
+                    <td class="zoo__cell--left">Kobe Animal Kingdom</td>
+                    <td class="zoo__cell--left">Япония</td>
+                    <td class="zoo__cell--center">Кобе</td>
+                    <td class="zoo__cell--left">5 котят в мае 2026 г.</td>
+                    <td class="zoo__cell--right">2006</td>
                 </tr>
                 <tr>
-                    <td class="left">Kolmårdens djurpark</td>
-                    <td class="left">Швеция</td>
-                    <td class="center">Норрчёпинг</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1965</td>
+                    <td class="zoo__cell--left">Kolmårdens djurpark</td>
+                    <td class="zoo__cell--left">Швеция</td>
+                    <td class="zoo__cell--center">Норрчёпинг</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1965</td>
                 </tr>
                 <tr>
-                    <td class="left">Korkeasaari Zoo</td>
-                    <td class="left">Финляндия</td>
-                    <td class="center">Хельсинки</td>
-                    <td class="left">3 котёнка в июле 2026 г.</td>
-                    <td class="right">1889</td>
+                    <td class="zoo__cell--left">Korkeasaari Zoo</td>
+                    <td class="zoo__cell--left">Финляндия</td>
+                    <td class="zoo__cell--center">Хельсинки</td>
+                    <td class="zoo__cell--left">3 котёнка в июле 2026 г.</td>
+                    <td class="zoo__cell--right">1889</td>
                 </tr>
                 <tr>
-                    <td class="left">Kraków Zoo</td>
-                    <td class="left">Польша</td>
-                    <td class="center">Краков</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1929</td>
+                    <td class="zoo__cell--left">Kraków Zoo</td>
+                    <td class="zoo__cell--left">Польша</td>
+                    <td class="zoo__cell--center">Краков</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1929</td>
                 </tr>
                 <tr>
-                    <td class="left">La Torbiera</td>
-                    <td class="left">Италия</td>
-                    <td class="center">Аграте-Контурбия</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1977</td>
+                    <td class="zoo__cell--left">La Torbiera</td>
+                    <td class="zoo__cell--left">Италия</td>
+                    <td class="zoo__cell--center">Аграте-Контурбия</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1977</td>
                 </tr>
                 <tr>
-                    <td class="left">Lietuvos zoologijos sodas</td>
-                    <td class="left">Литва</td>
-                    <td class="center">Каунас</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1938</td>
+                    <td class="zoo__cell--left">Lietuvos zoologijos sodas</td>
+                    <td class="zoo__cell--left">Литва</td>
+                    <td class="zoo__cell--center">Каунас</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1938</td>
                 </tr>
                 <tr>
-                    <td class="left">Nasu Animal Kingdom</td>
-                    <td class="left">Япония</td>
-                    <td class="center">Насу</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1980</td>
+                    <td class="zoo__cell--left">Nasu Animal Kingdom</td>
+                    <td class="zoo__cell--left">Япония</td>
+                    <td class="zoo__cell--center">Насу</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1980</td>
                 </tr>
                 <tr>
-                    <td class="left">Port Lympne Safari Park</td>
-                    <td class="left">Великобритания</td>
-                    <td class="center">Хайт</td>
-                    <td class="left">3 самки</td>
-                    <td class="right">1973</td>
+                    <td class="zoo__cell--left">Port Lympne Safari Park</td>
+                    <td class="zoo__cell--left">Великобритания</td>
+                    <td class="zoo__cell--center">Хайт</td>
+                    <td class="zoo__cell--left">3 самки</td>
+                    <td class="zoo__cell--right">1973</td>
                 </tr>
                 <tr>
-                    <td class="left">Poznań Zoo</td>
-                    <td class="left">Польша</td>
-                    <td class="center">Познань</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1874</td>
+                    <td class="zoo__cell--left">Poznań Zoo</td>
+                    <td class="zoo__cell--left">Польша</td>
+                    <td class="zoo__cell--center">Познань</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1874</td>
                 </tr>
                 <tr>
-                    <td class="left">Rīga Zoo</td>
-                    <td class="left">Латвия</td>
-                    <td class="center">Рига</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1912</td>
+                    <td class="zoo__cell--left">Rīga Zoo</td>
+                    <td class="zoo__cell--left">Латвия</td>
+                    <td class="zoo__cell--center">Рига</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1912</td>
                 </tr>
                 <tr>
-                    <td class="left">Tallinn Zoo</td>
-                    <td class="left">Эстония</td>
-                    <td class="center">Таллин</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1939</td>
+                    <td class="zoo__cell--left">Tallinn Zoo</td>
+                    <td class="zoo__cell--left">Эстония</td>
+                    <td class="zoo__cell--center">Таллин</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1939</td>
                 </tr>
                 <tr>
-                    <td class="left">Tiergarten Schönbrunn</td>
-                    <td class="left">Австрия</td>
-                    <td class="center">Вена</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1752</td>
+                    <td class="zoo__cell--left">Tiergarten Schönbrunn</td>
+                    <td class="zoo__cell--left">Австрия</td>
+                    <td class="zoo__cell--center">Вена</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1752</td>
                 </tr>
                 <tr>
-                    <td class="left">Wrocław Zoo</td>
-                    <td class="left">Польша</td>
-                    <td class="center">Вроцлав</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1865</td>
+                    <td class="zoo__cell--left">Wrocław Zoo</td>
+                    <td class="zoo__cell--left">Польша</td>
+                    <td class="zoo__cell--center">Вроцлав</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1865</td>
                 </tr>
                 <tr>
-                    <td class="left">Xining Wildlife Park</td>
-                    <td class="left">Китай</td>
-                    <td class="center">Синин</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1990</td>
+                    <td class="zoo__cell--left">Xining Wildlife Park</td>
+                    <td class="zoo__cell--left">Китай</td>
+                    <td class="zoo__cell--center">Синин</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1990</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo Berlin</td>
-                    <td class="left">Германия</td>
-                    <td class="center">Берлин</td>
-                    <td class="left">Размножение с 1998 г., 41 потомок</td>
-                    <td class="right">1844</td>
+                    <td class="zoo__cell--left">Zoo Berlin</td>
+                    <td class="zoo__cell--left">Германия</td>
+                    <td class="zoo__cell--center">Берлин</td>
+                    <td class="zoo__cell--left">Размножение с 1998 г., 41 потомок</td>
+                    <td class="zoo__cell--right">1844</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo de la Flèche</td>
-                    <td class="left">Франция</td>
-                    <td class="center">Ла-Флеш</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1946</td>
+                    <td class="zoo__cell--left">Zoo de la Flèche</td>
+                    <td class="zoo__cell--left">Франция</td>
+                    <td class="zoo__cell--center">Ла-Флеш</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1946</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo de Lille</td>
-                    <td class="left">Франция</td>
-                    <td class="center">Лилль</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1950</td>
+                    <td class="zoo__cell--left">Zoo de Lille</td>
+                    <td class="zoo__cell--left">Франция</td>
+                    <td class="zoo__cell--center">Лилль</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1950</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo de Lyon</td>
-                    <td class="left">Франция</td>
-                    <td class="center">Лион</td>
-                    <td class="left">Есть самка</td>
-                    <td class="right">1859</td>
+                    <td class="zoo__cell--left">Zoo de Lyon</td>
+                    <td class="zoo__cell--left">Франция</td>
+                    <td class="zoo__cell--center">Лион</td>
+                    <td class="zoo__cell--left">Есть самка</td>
+                    <td class="zoo__cell--right">1859</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo Leipzig</td>
-                    <td class="left">Германия</td>
-                    <td class="center">Лейпциг</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1878</td>
+                    <td class="zoo__cell--left">Zoo Leipzig</td>
+                    <td class="zoo__cell--left">Германия</td>
+                    <td class="zoo__cell--center">Лейпциг</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1878</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo Praha</td>
-                    <td class="left">Чехия</td>
-                    <td class="center">Прага</td>
-                    <td class="left">Размножение с 1951 г.</td>
-                    <td class="right">1931</td>
+                    <td class="zoo__cell--left">Zoo Praha</td>
+                    <td class="zoo__cell--left">Чехия</td>
+                    <td class="zoo__cell--center">Прага</td>
+                    <td class="zoo__cell--left">Размножение с 1951 г.</td>
+                    <td class="zoo__cell--right">1931</td>
                 </tr>
                 <tr>
-                    <td class="left">Zoo Zürich</td>
-                    <td class="left">Швейцария</td>
-                    <td class="center">Цюрих</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1929</td>
+                    <td class="zoo__cell--left">Zoo Zürich</td>
+                    <td class="zoo__cell--left">Швейцария</td>
+                    <td class="zoo__cell--center">Цюрих</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1929</td>
                 </tr>
 
-                <!-- Русские названия — после латинских -->
                 <tr>
-                    <td class="left">Алматинский зоопарк</td>
-                    <td class="left">Казахстан</td>
-                    <td class="center">Алматы</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1937</td>
+                    <td class="zoo__cell--left">Алматинский зоопарк</td>
+                    <td class="zoo__cell--left">Казахстан</td>
+                    <td class="zoo__cell--center">Алматы</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1937</td>
                 </tr>
                 <tr>
-                    <td class="left">Барнаульский зоопарк «Лесная сказка»</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Барнаул</td>
-                    <td class="left">Есть самка Pepe</td>
-                    <td class="right">2004</td>
+                    <td class="zoo__cell--left">Барнаульский зоопарк «Лесная сказка»</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Барнаул</td>
+                    <td class="zoo__cell--left">Есть самка Pepe</td>
+                    <td class="zoo__cell--right">2004</td>
                 </tr>
                 <tr>
-                    <td class="left">Бишкекский зоопарк</td>
-                    <td class="left">Кыргызстан</td>
-                    <td class="center">Бишкек</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1936</td>
+                    <td class="zoo__cell--left">Бишкекский зоопарк</td>
+                    <td class="zoo__cell--left">Кыргызстан</td>
+                    <td class="zoo__cell--center">Бишкек</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1936</td>
                 </tr>
                 <tr>
-                    <td class="left">Ленинградский зоопарк</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Санкт-Петербург</td>
-                    <td class="left">4 котёнка в 2026 г.</td>
-                    <td class="right">1865</td>
+                    <td class="zoo__cell--left">Ленинградский зоопарк</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Санкт-Петербург</td>
+                    <td class="zoo__cell--left">4 котёнка в 2026 г.</td>
+                    <td class="zoo__cell--right">1865</td>
                 </tr>
                 <tr>
-                    <td class="left">Московский зоопарк</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Москва</td>
-                    <td class="left">Размножение с 1975 г., 140+ потомков</td>
-                    <td class="right">1864</td>
+                    <td class="zoo__cell--left">Московский зоопарк</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Москва</td>
+                    <td class="zoo__cell--left">Размножение с 1975 г., 140+ потомков</td>
+                    <td class="zoo__cell--right">1864</td>
                 </tr>
                 <tr>
-                    <td class="left">Новосибирский зоопарк</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Новосибирск</td>
-                    <td class="left">2 самки принесли потомство в 2026 г.</td>
-                    <td class="right">1947</td>
+                    <td class="zoo__cell--left">Новосибирский зоопарк</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Новосибирск</td>
+                    <td class="zoo__cell--left">2 самки принесли потомство в 2026 г.</td>
+                    <td class="zoo__cell--right">1947</td>
                 </tr>
                 <tr>
-                    <td class="left">Удмуртский зоопарк</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Ижевск</td>
-                    <td class="left">Есть самец Алтай</td>
-                    <td class="right">2008</td>
+                    <td class="zoo__cell--left">Удмуртский зоопарк</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Ижевск</td>
+                    <td class="zoo__cell--left">Есть самец Алтай</td>
+                    <td class="zoo__cell--right">2008</td>
                 </tr>
                 <tr>
-                    <td class="left">Читинский зоопарк</td>
-                    <td class="left">Россия</td>
-                    <td class="center">Чита</td>
-                    <td class="left">Есть содержание</td>
-                    <td class="right">1994</td>
+                    <td class="zoo__cell--left">Читинский зоопарк</td>
+                    <td class="zoo__cell--left">Россия</td>
+                    <td class="zoo__cell--center">Чита</td>
+                    <td class="zoo__cell--left">Есть содержание</td>
+                    <td class="zoo__cell--right">1994</td>
                 </tr>
             </tbody>
         </table>
@@ -341,7 +341,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026. Лабораторная работа №2.</p>
+        <p>&copy; 2026. Лабораторная работа №4.</p>
     </footer>
 
 </body>
