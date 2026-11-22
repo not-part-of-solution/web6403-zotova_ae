@@ -48,7 +48,7 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
-    if (n<0) return NaN /*проверить адекватность этого решения*/
+    if (n<0) return undefined; /*проверить адекватность этого решения*/
     else if(n===0) return 1
     return n*factorial(n-1)
 
@@ -70,7 +70,7 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
-    if(n < 0) return Nan
+    if(n < 0) return undefined;
     if (n === 1 || n === 2) return 1;
     return fibonacci(n-1)+fibonacci(n-2)
 }
